@@ -1,5 +1,5 @@
 #!/bin/bash
-public_ip=$(aws ec2 describe-instances --instance-ids i-04d362031a121972b --query 'Reservations[*].Instances[*].PublicIpAddress' --output text)
+public_ip=$(aws ec2 describe-instances --instance-ids i-0443d76558dae590d --query 'Reservations[*].Instances[*].PublicIpAddress' --output text)
 while true
 do
   STATUS=$(curl -k -s -o /dev/null -w '%{http_code}' https://$public_ip)
