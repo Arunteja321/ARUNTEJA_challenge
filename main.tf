@@ -9,13 +9,13 @@ terraform {
 
 provider "aws" {
   # Configuration options
-  region = "ap-northeast-1"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "ec2_instance" {
         
-        ami = "ami-0bba69335379e17f8"
-        subnet_id = "subnet-04688b953bb9cbdb6"
+        ami = "ami-0b5eea76982371e91"
+        subnet_id = "subnet-7086065e"
         instance_type = "t2.micro"
         key_name = "nginx-keypair"
         user_data = "${file("test-script.sh")}"
